@@ -22,5 +22,6 @@ Buka `http://localhost:3000`.
 - Tampilan responsif untuk desktop dan perangkat seluler.
 - Navigasi bagian, pilihan tema terang/gelap, dan filter keahlian.
 - Foto profil serta CV PDF yang dapat diunduh.
+- Mendukung deploy langsung ke Vercel dan GitHub Pages.
 
 Template awal menggunakan Geeky Nextjs dari Statichunt/ThemeWagon; konten dan tampilan portofolio telah disesuaikan untuk Wirza Kurnia Ananda.
