@@ -23,6 +23,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const navigation = [
   { label: "Tentang", href: "#tentang" },
   { label: "Pengalaman", href: "#pengalaman" },
+  { label: "Publikasi", href: "#publikasi" },
   { label: "Pendidikan", href: "#pendidikan" },
   { label: "Keahlian", href: "#keahlian" },
   { label: "Kontak", href: "#kontak" },
@@ -71,6 +72,42 @@ const trainings = [
     date: "Mei 2023",
     description: "Manajemen risiko operasional dan perbankan. Nilai ujian: B.",
     number: "02",
+  },
+];
+const publications = [
+  {
+    kind: "JURNAL ILMIAH",
+    date: "29 JUN 2026",
+    title:
+      "Pengaruh Motivasi, Persepsi, dan Sikap terhadap Keputusan Pembelian Body Lotion Vaseline pada Mahasiswa UIN Sultan Syarif Kasim Riau",
+    source: "Al-Manar Journal of Accountancy and Business Studies",
+    role: "Penulis pertama, bersama Ainun Mardiah",
+    detail:
+      "Survei kuantitatif pada 96 responden; motivasi dan sikap berpengaruh positif dan signifikan terhadap keputusan pembelian (R\u00b2 = 0,500).",
+    url: "https://journal.al-manarpublisher.com/index.php/AJABS/article/view/254",
+  },
+  {
+    kind: "JURNAL ILMIAH",
+    date: "20 OKT 2025",
+    title:
+      "Program Maghrib Mengaji Dalam Upaya Penuntasan Buta Aksara Al-Qur\u2019an di Desa Dayang Suri",
+    source:
+      "Jurnal Pengabdian Masyarakat dan Penerapan Ilmu Pengetahuan (JPMPIP), Vol. 6 No. 2, hlm. 55\u201359",
+    role: "Penulis bersama (salah satu dari 12 penulis)",
+    detail:
+      "Program pengabdian masyarakat di Desa Dayang Suri, Siak, untuk menuntaskan buta aksara Al-Qur\u2019an. DOI: 10.25299/jpmpip.2025.24576.",
+    url: "https://journal.uir.ac.id/index.php/jpmpip/article/view/24576",
+  },
+  {
+    kind: "ARTIKEL BERITA",
+    date: "08 JUN 2023",
+    title:
+      "Mahasiswa UIN Audiensi dan Visitasi Akademik 2023 ke Lapas Anak Kelas II Pekanbaru",
+    source: "datariau.com",
+    role: "Penulis artikel",
+    detail:
+      "Liputan audiensi dan visitasi akademik mahasiswa Manajemen UIN Suska Riau ke Lapas Anak Kelas II Pekanbaru.",
+    url: "https://www.datariau.com/detail/pendidikan/mahasiswa-uin-audiensi-dan-visitasi-akademik-2023-ke-lapas-anak-kelas-ii-pekanbaru",
   },
 ];
 
@@ -222,11 +259,6 @@ const Home = () => {
                 />
                 <span className="portrait-index">01 / PROFIL</span>
               </div>
-              <div className="portrait-stamp" aria-hidden="true">
-                <span>MANAGEMENT</span>
-                <strong>+</strong>
-                <span>ADMINISTRATION</span>
-              </div>
               <div className="hero-caption">
                 <span>Rapi dalam detail.</span>
                 <span>Siap untuk langkah berikutnya.</span>
@@ -330,9 +362,49 @@ const Home = () => {
           </div>
         </section>
 
+        <section className="publications-section" id="publikasi">
+          <div className="content-section">
+            <div className="section-heading reveal">
+              <span className="section-kicker">03 — PUBLIKASI &amp; PENULISAN</span>
+              <span className="section-aside">KARYA YANG TERPUBLIKASI</span>
+            </div>
+            <div className="publications-intro reveal">
+              <h2>
+                Menulis, meneliti, <span>dan membagikannya.</span>
+              </h2>
+              <p>Dua jurnal ilmiah dan satu artikel berita yang ditulis Wirza.</p>
+            </div>
+            <div className="publication-list">
+              {publications.map((item, index) => (
+                <article className="publication-card reveal" key={item.url}>
+                  <span className="publication-number">0{index + 1}</span>
+                  <div className="publication-content">
+                    <div className="publication-meta">
+                      <span>{item.kind}</span>
+                      <span>{item.date}</span>
+                    </div>
+                    <h3>{item.title}</h3>
+                    <p className="publication-source">{item.source}</p>
+                    <p className="publication-detail">{item.detail}</p>
+                    <p className="publication-role">{item.role}</p>
+                    <a
+                      className="publication-link"
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Baca selengkapnya <FaArrowRight aria-hidden="true" />
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="content-section learning-section" id="pendidikan">
           <div className="section-heading reveal">
-            <span className="section-kicker">03 — PENDIDIKAN & PELATIHAN</span>
+            <span className="section-kicker">04 — PENDIDIKAN & PELATIHAN</span>
             <span className="section-aside">TERUS BERTUMBUH</span>
           </div>
           <div className="learning-grid">
@@ -367,7 +439,7 @@ const Home = () => {
         <section className="skills-section" id="keahlian">
           <div className="content-section">
             <div className="section-heading reveal">
-              <span className="section-kicker">04 — KEAHLIAN</span>
+              <span className="section-kicker">05 — KEAHLIAN</span>
               <span className="section-aside">HAL YANG BISA SAYA BAWA</span>
             </div>
             <div className="skills-intro reveal">
@@ -404,7 +476,7 @@ const Home = () => {
         <section className="contact-section" id="kontak">
           <div className="content-section contact-inner reveal">
             <div className="contact-topline">
-              <span className="section-kicker">05 — KONTAK</span>
+              <span className="section-kicker">06 — KONTAK</span>
               <span className="contact-sparkle" aria-hidden="true">✳</span>
             </div>
             <p className="eyebrow">ADA PELUANG MENARIK?</p>
