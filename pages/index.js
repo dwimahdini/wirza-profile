@@ -167,6 +167,32 @@ const Home = () => {
         />
         <meta name="theme-color" content="#f5f4ef" />
         <link rel="icon" href={`${basePath}/images/favicon.png`} />
+        {/* Open Graph — kartu preview WhatsApp / media sosial */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Wirza Kurnia Ananda — Portofolio" />
+        <meta property="og:title" content="Wirza Kurnia Ananda — Portofolio" />
+        <meta
+          property="og:description"
+          content="Portofolio Wirza Kurnia Ananda, lulusan Manajemen dengan pengalaman administrasi dan pengelolaan data."
+        />
+        <meta property="og:url" content="https://wirza-profile-nine.vercel.app/" />
+        <meta
+          property="og:image"
+          content="https://wirza-profile-nine.vercel.app/images/og-image.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Wirza Kurnia Ananda — Portofolio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Wirza Kurnia Ananda — Portofolio" />
+        <meta
+          name="twitter:description"
+          content="Portofolio Wirza Kurnia Ananda, lulusan Manajemen dengan pengalaman administrasi dan pengelolaan data."
+        />
+        <meta
+          name="twitter:image"
+          content="https://wirza-profile-nine.vercel.app/images/og-image.jpg"
+        />
       </Head>
 
       <div
