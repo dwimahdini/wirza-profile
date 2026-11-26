@@ -16,6 +16,7 @@ import {
   FaRegCalendarAlt,
   FaSun,
   FaTimes,
+  FaUsers,
 } from "react-icons/fa";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -357,6 +358,39 @@ const Home = () => {
               <div className="experience-bottomline">
                 <span>ADMINISTRASI PAJAK</span>
                 <span>PEKANBARU, RIAU</span>
+              </div>
+            </div>
+            <div className="experience-card reveal">
+              <div className="experience-topline">
+                <span className="experience-icon"><FaUsers aria-hidden="true" /></span>
+                <span className="date-pill"><FaRegCalendarAlt aria-hidden="true" /> 2025</span>
+              </div>
+              <div className="experience-main">
+                <div className="experience-title">
+                  <p className="eyebrow">KULIAH KERJA NYATA</p>
+                  <h2>Desa Dayang Suri</h2>
+                  <p className="company-line">UIN Sultan Syarif Kasim Riau <span>·</span> Humas (Hubungan Masyarakat)</p>
+                </div>
+                <div className="experience-details">
+                  <p className="list-intro">Peran dan kontribusi</p>
+                  <ul>
+                    <li><FaCheck aria-hidden="true" /> <span>Menjabat sebagai Humas (Hubungan Masyarakat) pada KKN UIN Suska Riau 2025 di Desa Dayang Suri, Siak.</span></li>
+                    <li><FaCheck aria-hidden="true" /> <span>Menjadi bagian dari tim Humas bersama Wahyu Ariansyah dan Mutia Nabila.</span></li>
+                    <li><FaCheck aria-hidden="true" /> <span>KKN dilaksanakan di Desa Dayang Suri, Kecamatan Bungaraya, Kabupaten Siak.</span></li>
+                  </ul>
+                  <a
+                    className="publication-link"
+                    href="https://www.instagram.com/p/DMCb1x4TkT2/?img_index=1"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Lihat postingan tim Humas <FaArrowRight aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+              <div className="experience-bottomline">
+                <span>KKN UIN SUSKA RIAU 2025</span>
+                <span>DESA DAYANG SURI, SIAK</span>
               </div>
             </div>
           </div>
